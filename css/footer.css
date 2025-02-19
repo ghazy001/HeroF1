@@ -1,0 +1,43 @@
+/* Footer Styles */
+.footer {
+    background-color: #15151E; /* Dark background */
+    color: #fff;
+    padding: 170px 300px;
+    display: flex;
+    
+    justify-content:space-around;
+  
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Columns */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Footer Links */
+.footer-column a {
+    text-decoration: none;
+    color: #B0B0B0;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+
+/* Curved Line */
+.footer-line {
+    position: absolute;
+    
+    left: 10%;
+    width: 80%;
+    height: 250px;
+    border-bottom: 3px solid #888;
+    border-right: 3px solid #888;
+    border-radius: 0 0 50px 50px; /* Creates the curve */
+}

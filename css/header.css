@@ -1,0 +1,116 @@
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+/* Reset & General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Racing Sans One', cursive;
+    background-color: #fff;
+}
+
+/* Top Bar (White) */
+.top-bar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Left Section (Logos) */
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fia-logo{
+    height: 40px;
+    width: auto;
+    margin-left: 170px;
+}
+.f
+/* Right Section (Buttons) */
+.right-section {
+    display: flex;
+   
+    gap: 10px;
+ 
+}
+
+.signin-btn, .signup-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Sign In & Sign Up Styling */
+.signin-btn {
+    background-color: #000;
+    color: #fff;
+    
+}
+
+.signup-btn {
+    background-color: #fff;
+    color: #E10500;
+    border: 2px solid #E10500;
+    margin-right: 250px;
+}
+
+/* Bottom Bar (Red Navigation) */
+.bottom-bar {
+    background-color: #E10500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Navigation */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #E10500;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-container input {
+    border: none;
+   
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.search-container input::placeholder {
+    color: #fff;}
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+}
