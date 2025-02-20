@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Standings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .standings-container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .standings-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .standings-table th, .standings-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .standings-table th {
+            background-color: #f4f4f4;
+        }
+        .driver-row {
+            display: flex;
+            align-items: center;
+        }
+        .driver-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="standings-container">
+        <div class="standings-header">2024 Driver Standings</div>
+        <table class="standings-table">
+            <tr>
+                <th>Position</th>
+                <th>Driver</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="driver-row">
+                    <img src="verstappen.jpg" alt="Max Verstappen" class="driver-img"> Max Verstappen
+                </td>
+                <td>437</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="driver-row">
+                    <img src="norris.jpg" alt="Lando Norris" class="driver-img"> Lando Norris
+                </td>
+                <td>374</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="driver-row">
+                    <img src="leclerc.jpg" alt="Charles Leclerc" class="driver-img"> Charles Leclerc
+                </td>
+                <td>356</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="driver-row">
+                    <img src="piastri.jpg" alt="Oscar Piastri" class="driver-img"> Oscar Piastri
+                </td>
+                <td>292</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="driver-row">
+                    <img src="sainz.jpg" alt="Carlos Sainz Jr." class="driver-img"> Carlos Sainz Jr.
+                </td>
+                <td>292</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
