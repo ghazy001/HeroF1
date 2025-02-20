@@ -1,0 +1,115 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column; /* Les éléments du bloc team sont en colonne */
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  /* Conteneur pour le nom et le logo sur la même ligne */
+  .team-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .team-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 200px; /* Espace entre le nom et le logo, ajuste cette valeur selon tes besoins */
+  }
+  
+  .team-logo {
+    width: 40px;  /* Taille du logo */
+    height: auto;
+  }
+  
+  .team-car {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  /* Background colors for each team */
+  .ferrari { background: linear-gradient(to right, red, rgb(255, 247, 0)); }
+  .mercedes { background: linear-gradient(to right, green, rgb(4, 31, 4)); }
+  .redbull { background: linear-gradient(to right, blue, rgb(176, 176, 204)); }
+  .alpine { background: linear-gradient(to right, lightblue, darkblue); }
+  .mclaren { background: linear-gradient(to right, orange, rgb(49, 29, 4)); }
+  .alphatauri { background: linear-gradient(to right, black, darkgray); }
+  .astonmartin { background: linear-gradient(to right, rgb(36, 169, 36), rgb(22, 56, 22)); }
+  .williams { background: linear-gradient(to right, blue, rgb(52, 52, 207)); }
+  .haas { background: linear-gradient(to right, gray, black); }
+  .kicksauber { background: linear-gradient(to right, lightgreen, rgb(1, 13, 1)); }
+  
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .billing-form {
+            width: 50%;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .order-summary {
+            width: 40%;
+            border-left: 2px solid #ccc;
+            padding-left: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .product img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .place-order {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }

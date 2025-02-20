@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .billing-form {
+            width: 50%;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .order-summary {
+            width: 40%;
+            border-left: 2px solid #ccc;
+            padding-left: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .product img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .place-order {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Billing Form -->
+        <div class="billing-form">
+            <h2>Billing Details</h2>
+            <form action="/submit-order" method="POST">
+                <label>First Name*</label>
+                <input type="text" class="input-field" name="first_name" required>
+
+                <label>Last Name</label>
+                <input type="text" class="input-field" name="last_name">
+
+                <label>Street Address*</label>
+                <input type="text" class="input-field" name="street_address" required>
+
+                <label>Town/City*</label>
+                <input type="text" class="input-field" name="city" required>
+
+                <label>Phone Number*</label>
+                <input type="tel" class="input-field" name="phone" required>
+
+                <label>Email Address*</label>
+                <input type="email" class="input-field" name="email" required>
+
+               
+
+            </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <div class="product">
+                <img src="C:\Users\zeddi\Downloads\figma\images\pirelli_hat.png.png" alt="Pirelli Hat">
+                <span>Pirelli Hat - 80 Dt</span>
+            </div>
+            <div class="product">
+                <img src="C:\Users\zeddi\Downloads\figma\images\mercedes_tshirt.png.png" alt="Mercedes T-Shirt">
+                <span>Mercedes T-Shirt - 100 Dt</span>
+            </div>
+
+            <hr>
+            <p>Subtotal: <strong>180 Dt</strong></p>
+            <p>Shipping: <strong>10 Dt</strong></p>
+            <p>Total: <strong>190 Dt</strong></p>
+            <h3>Payment Method</h3>
+            <p>
+            
+            </p>
+            <div class="payment-option">
+                <input type="radio" name="payment" value="bank">
+                <label>Bank <img src="C:\Users\zeddi\Downloads\figma\images\visa_mastercard.png.png" width="50" style="margin-left: 10px;"></label>
+            </div>
+            <p></p>
+            <div class="payment-option">
+                <input type="radio" name="payment" value="cash" checked>
+                <label>Cash on delivery</label>
+                <p></p>
+            </div>
+            <button type="submit" class="place-order">Place Order</button>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
