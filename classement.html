@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement Pilotes 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        
+        .content {
+            width: 60%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        .standings {
+            width: 100%;
+        }
+        
+        .driver {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .driver:last-child {
+            border-bottom: none;
+        }
+        
+        .driver img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .position {
+            font-weight: bold;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .name {
+            flex-grow: 1;
+            font-size: 18px;
+        }
+        
+        .points {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .rank-gold {
+            color: gold;
+        }
+        
+        .rank-silver {
+            color: silver;
+        }
+        
+        .rank-bronze {
+            color: #cd7f32;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header chargé dynamiquement -->
+    <div id="header"></div>
+
+    <div class="content">
+        <h1>2024 Driver Standings</h1>
+        <div class="standings">
+            <div class="driver">
+                <span class="position rank-gold">🥇</span>
+                <img src="images/verstappen.jpg" alt="Max Verstappen">
+                <span class="name">Max Verstappen</span>
+                <span class="points">437 pts</span>
+            </div>
+            <div class="driver">
+                <span class="position rank-silver">🥈</span>
+                <img src="images/norris.jpg" alt="Lando Norris">
+                <span class="name">Lando Norris</span>
+                <span class="points">374 pts</span>
+            </div>
+            <div class="driver">
+                <span class="position rank-bronze">🥉</span>
+                <img src="images/leclerc.jpg" alt="Charles Leclerc">
+                <span class="name">Charles Leclerc</span>
+                <span class="points">356 pts</span>
+            </div>
+            <div class="driver">
+                <span class="position">4</span>
+                <img src="images/piastri.jpg" alt="Oscar Piastri">
+                <span class="name">Oscar Piastri</span>
+                <span class="points">292 pts</span>
+            </div>
+            <div class="driver">
+                <span class="position">5</span>
+                <img src="images/sainz.jpg" alt="Carlos Sainz Jr.">
+                <span class="name">Carlos Sainz Jr.</span>
+                <span class="points">292 pts</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
