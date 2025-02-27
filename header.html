@@ -1,48 +1,34 @@
-<!-- Optionally include an icon library (Font Awesome) for the search icon -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
-<link rel="stylesheet" href="css/header.css" />
-
 <header>
-  <!-- Top Bar (White) -->
-  <div class="top-bar">
-    <div class="left-section">
-      <!-- Replace with your FIA logo -->
-      <img src="images/fia.png" alt="FIA Logo" class="fia-logo" />
-      <!-- Replace with your F1 logo -->
-     
+    <!-- Top Bar (White) -->
+    <div class="top-bar flex justify-between items-center bg-white p-4">
+        <div class="left-section flex items-center gap-4">
+            <img src="public/assets/fia.png" alt="FIA Logo" class="h-10 ml-20">
+        </div>
+        <div class="right-section flex gap-4 mr-20">
+            <button class="signin-btn bg-black text-white px-4 py-2 rounded-full font-bold">Sign In</button>
+            <button class="signup-btn bg-white text-red-600 border-2 border-red-600 px-4 py-2 rounded-full font-bold">Sign Up</button>
+        </div>
     </div>
-    <div class="right-section">
-      <button class="signin-btn">Sign In</button>
-      <button class="signup-btn">Sign Up</button>
-    </div>
-  </div>
 
-  <!-- Bottom Bar (Red) -->
-  <div class="bottom-bar">
-    <img src="images/logo.png" alt="F1 Logo" class="f1-logo" />
-    <!-- Navigation Links -->
-    <nav class="main-nav">
-       
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Marketplace</a></li>
-        <li><a href="#">Teams</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="#">Streaming</a></li>
-        <li><a href="#">Events</a></li>
-      </ul>
-    </nav>
-
-    <!-- Search Bar -->
-    <div class="search-container">
-      <input type="text" placeholder="I am looking for..."  class="search-input" />
-      <button type="submit">
-        <!-- Font Awesome icon (optional) -->
-        <i class="fa fa-search"></i>
-      </button>
+    <!-- Bottom Bar (Red) -->
+    <div class="bottom-bar bg-red-600 flex items-center justify-between p-4">
+        <img src="public/assets/logo.png" alt="F1 Logo" class="h-10">
+        <nav class="main-nav">
+            <ul class="flex gap-8">
+                <li><a href="#" class="text-white">Home</a></li>
+                <li><a href="#" class="text-white">Marketplace</a></li>
+                <li><a href="#" class="text-white">Teams</a></li>
+                <li><a href="#" class="text-white">Tickets</a></li>
+                <li><a href="#" class="text-white">Streaming</a></li>
+                <li><a href="#" class="text-white">Events</a></li>
+            </ul>
+        </nav>
+        <!-- Search Bar -->
+        <div class="search-container flex items-center bg-red-600 border-2 border-white rounded-full px-3 py-1">
+            <input type="text" placeholder="I am looking for..." class="bg-transparent text-white placeholder-white outline-none">
+            <button type="submit" class="text-white">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
     </div>
-  </div>
 </header>
