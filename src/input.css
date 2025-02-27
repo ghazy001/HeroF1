@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés */
+@layer base {
+    body {
+        @apply bg-black text-white font-sans text-center m-0 py-5;
+    }
+}
+
+@layer components {
+    .teams-container {
+        @apply flex flex-wrap justify-center max-w-[800px] mx-auto;
+    }
+
+    .team {
+        @apply flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative;
+    }
+
+    .team-header {
+        @apply flex items-center justify-center mb-2;
+    }
+
+    .team-name {
+        @apply font-bold text-lg mr-[200px];
+    }
+
+    .team-logo {
+        @apply w-10 h-auto;
+    }
+
+    .team-car {
+        @apply w-full max-w-[180px] rounded-md mt-1;
+    }
+}
+
+@layer utilities {
+    .bg-ferrari { @apply bg-gradient-to-r from-red-500 to-yellow-400; }
+    .bg-mercedes { @apply bg-gradient-to-r from-green-500 to-green-900; }
+    .bg-redbull { @apply bg-gradient-to-r from-blue-500 to-indigo-300; }
+    .bg-alpine { @apply bg-gradient-to-r from-blue-300 to-blue-900; }
+    .bg-mclaren { @apply bg-gradient-to-r from-orange-500 to-yellow-800; }
+    .bg-alphatauri { @apply bg-gradient-to-r from-gray-900 to-gray-500; }
+    .bg-astonmartin { @apply bg-gradient-to-r from-green-500 to-green-900; }
+    .bg-williams { @apply bg-gradient-to-r from-blue-500 to-blue-700; }
+    .bg-haas { @apply bg-gradient-to-r from-gray-500 to-black; }
+    .bg-kicksauber { @apply bg-gradient-to-r from-green-400 to-green-950; }
+}
+
+/* Styles personnalisés pour les champs de formulaire */
+.input-field {
+    @apply w-full p-3 border border-gray-300 rounded-md mb-4;
+}
+
+/* Styles pour le bouton "Place Order" */
+.place-order {
+    @apply bg-red-600 text-white p-3 font-bold rounded-md cursor-pointer w-full;
+}
+
+/* Styles pour les options de paiement */
+.payment-option {
+    @apply flex items-center mb-4;
+}
+
+.payment-option input {
+    @apply mr-2;
+}
+
+.payment-option label {
+    @apply text-sm;
+}
+
+.order-summary {
+    @apply w-2/5 pl-8 border-l-2 border-gray-300;
+}
+
+/* Produit dans le récapitulatif */
+.product {
+    @apply flex items-center mb-4;
+}
+
+.product img {
+    @apply w-12 h-12 mr-4;
+}
+
+
+
+.billing-form {
+    @apply w-1/2;
+}
+
+/* Styles pour les labels */
+.label {
+    @apply block text-sm font-medium text-gray-700;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="input.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-100">
+
+<div class="container">
+    <!-- Billing Form -->
+    <div class="billing-form">
+        <h2 class="title">Billing Details</h2>
+        <form action="/submit-order" method="POST">
+            <label for="first_name" class="label">First Name*</label>
+            <input type="text" id="first_name" class="input-field" name="first_name" required>
+
+            <label for="last_name" class="label">Last Name</label>
+            <input type="text" id="last_name" class="input-field" name="last_name">
+
+            <label for="street_address" class="label">Street Address*</label>
+            <input type="text" id="street_address" class="input-field" name="street_address" required>
+
+            <label for="city" class="label">Town/City*</label>
+            <input type="text" id="city" class="input-field" name="city" required>
+
+            <label for="phone" class="label">Phone Number*</label>
+            <input type="tel" id="phone" class="input-field" name="phone" required>
+
+            <label for="email" class="label">Email Address*</label>
+            <input type="email" id="email" class="input-field" name="email" required>
+        </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+        <div class="product">
+            <img src="path_to_your_image/pirelli_hat.png" alt="Pirelli Hat">
+            <span>Pirelli Hat - 80 Dt</span>
+        </div>
+        <div class="product">
+            <img src="path_to_your_image/mercedes_tshirt.png" alt="Mercedes T-Shirt">
+            <span>Mercedes T-Shirt - 100 Dt</span>
+        </div>
+
+        <hr>
+        <p>Subtotal: <strong>180 Dt</strong></p>
+        <p>Shipping: <strong>10 Dt</strong></p>
+        <p>Total: <strong>190 Dt</strong></p>
+        <h3>Payment Method</h3>
+        <div class="payment-option">
+            <input type="radio" name="payment" value="bank" id="bank">
+            <label for="bank">Bank <img src="path_to_your_image/visa_mastercard.png" alt="Visa Mastercard" class="w-12 ml-2"></label>
+        </div>
+        <div class="payment-option">
+            <input type="radio" name="payment" value="cash" id="cash" checked>
+            <label for="cash">Cash on delivery</label>
+        </div>
+        <button type="submit" class="place-order">Place Order</button>
+    </div>
+</div>
+
+</body>
+</html>
