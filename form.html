@@ -1,66 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="input.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans bg-gray-100">
 
-<div class="container">
-    <!-- Billing Form -->
-    <div class="billing-form">
-        <h2 class="title">Billing Details</h2>
-        <form action="/submit-order" method="POST">
-            <label for="first_name" class="label">First Name*</label>
-            <input type="text" id="first_name" class="input-field" name="first_name" required>
+<div class="w-full items-center ">
+    <img src="./images/ciruit%20icon.png" alt="circuit" class="items-center  ">
+</div>
 
-            <label for="last_name" class="label">Last Name</label>
-            <input type="text" id="last_name" class="input-field" name="last_name">
+<body class="bg-white font-sans flex flex-col items-center justify-center min-h-screen p-6" style="font-family: 'Poppins', sans-serif;">
 
-            <label for="street_address" class="label">Street Address*</label>
-            <input type="text" id="street_address" class="input-field" name="street_address" required>
+<header id="header" class="w-full"></header>
 
-            <label for="city" class="label">Town/City*</label>
-            <input type="text" id="city" class="input-field" name="city" required>
+<div class="container mx-auto p-8 flex flex-col items-center  ">
 
-            <label for="phone" class="label">Phone Number*</label>
-            <input type="tel" id="phone" class="input-field" name="phone" required>
 
-            <label for="email" class="label">Email Address*</label>
-            <input type="email" id="email" class="input-field" name="email" required>
+
+    <div class="flex flex-wrap md:flex-nowrap gap-12 justify-center w-full max-w-5xl">
+        <!-- Formulaire de facturation -->
+        <div class="w-full md:w-2/3 p-6 bg-white ">
+            <h6 class="text-sm font-semibold mb-6 text-left">
+                <span class="text-gray-400">Marketplace</span>
+                <span class="text-black"> / Checkout</span>
+            </h6>
+            <h2 class="text-3xl font-semibold mb-6 text-left" style="font-family: 'Inter', sans-serif; margin-bottom: 30px">
+                Billing Details
+            </h2>            <form action="/soumettre-commande" method="POST">
+            <label class="block text-gray-400 font-semibold mb-2">First Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">Last Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50">
+
+            <label class="block text-gray-400 font-semibold mb-2">Street Address</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">Town/City</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">Phone Number</label>
+            <input type="tel" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">E-mail Adress</label>
+            <input type="email" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
         </form>
-    </div>
-
-    <!-- Order Summary -->
-    <div class="order-summary">
-        <div class="product">
-            <img src="path_to_your_image/pirelli_hat.png" alt="Pirelli Hat">
-            <span>Pirelli Hat - 80 Dt</span>
-        </div>
-        <div class="product">
-            <img src="path_to_your_image/mercedes_tshirt.png" alt="Mercedes T-Shirt">
-            <span>Mercedes T-Shirt - 100 Dt</span>
         </div>
 
-        <hr>
-        <p>Subtotal: <strong>180 Dt</strong></p>
-        <p>Shipping: <strong>10 Dt</strong></p>
-        <p>Total: <strong>190 Dt</strong></p>
-        <h3>Payment Method</h3>
-        <div class="payment-option">
-            <input type="radio" name="payment" value="bank" id="bank">
-            <label for="bank">Bank <img src="path_to_your_image/visa_mastercard.png" alt="Visa Mastercard" class="w-12 ml-2"></label>
+    <!-- Récapitulatif de commande -->
+        <div class="w-full md:w-2/3 p-6 bg-white mt-32">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <img src="./images/pirelli_hat.png.png" alt="Pirelli Hat" class="w-16 h-16 object-cover">
+                    <span class="text-lg ml-8">Pirelli Hat</span>
+                    <span class="text-lg ml-auto text-black">80 Dt</span>
+                </div>
+                <div class="flex justify-between items-center ">
+                    <img src="./images/mercedes_tshirt.png.png" alt="Mercedes T-Shirt" class="w-16 h-16 object-cover">
+                    <span class="text-lg ml-8">Mercedes T-Shirt</span>
+                    <span class="text-lg ml-auto text-black">100 Dt</span>
+                </div>
+            </div>
+            <div class="order-summary">
+                <p class="flex justify-between text-lg mt-6"><span>Subtotal:</span> <span class="text-black">180 Dt</span></p>
+                <hr>
+                <p class="flex justify-between text-lg mt-6"><span>Shipping:</span> <span class="text-black">10 Dt</span></p>
+                <hr>
+                <p class="flex justify-between text-lg mt-8"><span>Total:</span> <span class="text-black">190 Dt</span></p>
+            </div>
+
+
+            <!-- Paiement -->
+            <div class="flex items-center mt-6">
+                <input type="radio" name="payment" value="bank" class="mr-2">
+                <label class="text-lg">Bank</label>
+                <img src="./images/visa_mastercard.png.png" width="60" class="ml-4">
+            </div>
+            <div class="flex items-center mt-4">
+                <input type="radio" name="payment" value="cash" checked class="mr-2">
+                <label class="text-lg">Cash on Delivery</label>
+            </div>
+
+            <button type="submit" class="w-64 bg-red-600 text-white p-4 font-bold rounded mt-8 text-lg" style="font-family: 'Racing Sans One', sans-serif;">
+                Place Order
+            </button>
         </div>
-        <div class="payment-option">
-            <input type="radio" name="payment" value="cash" id="cash" checked>
-            <label for="cash">Cash on delivery</label>
-        </div>
-        <button type="submit" class="place-order">Place Order</button>
     </div>
 </div>
 
+<footer id="footer" class="w-full mt-8"></footer>
 </body>
 </html>

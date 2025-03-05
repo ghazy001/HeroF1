@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<header>
+  <!-- Top Bar (White) -->
+  <div class="top-bar flex justify-between items-center bg-white p-4">
+    <div class="left-section flex items-center gap-4">
+      <img src="public/assets/fia.png" alt="FIA Logo" class="h-10 ml-20">
+    </div>
+    <div class="right-section flex gap-4 mr-20">
+      <button class="signin-btn bg-black text-white px-4 py-2 rounded-full font-bold">Sign In</button>
+      <button class="signup-btn bg-white text-red-600 border-2 border-red-600 px-4 py-2 rounded-full font-bold">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Bottom Bar (Red) -->
+  <div class="bottom-bar bg-red-600 flex items-center justify-between p-4">
+    <img src="public/assets/logo.png" alt="F1 Logo" class="h-10">
+    <nav class="main-nav">
+      <ul class="flex gap-8">
+        <li><a href="#" class="text-white">Home</a></li>
+        <li><a href="#index.html" class="text-white">Marketplace</a></li>
+        <li><a href="#" class="text-white">Teams</a></li>
+        <li><a href="#" class="text-white">Tickets</a></li>
+        <li><a href="#" class="text-white">Streaming</a></li>
+        <li><a href="#" class="text-white">Events</a></li>
+      </ul>
+    </nav>
+    <!-- Search Bar -->
+    <div class="search-container flex items-center bg-red-600 border-2 border-white rounded-full px-3 py-1">
+      <input type="text" placeholder="I am looking for..." class="bg-transparent text-white placeholder-white outline-none">
+      <button type="submit" class="text-white">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+</header>
+</html>
