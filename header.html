@@ -10,7 +10,7 @@
         </div>
 
         <!-- Menu Burger for Mobile -->
-        <button id="menu-btn" class="md:hidden text-black text-lg md:text-2xl p-2 z-10">
+        <button id="menu-btn" class="md:hidden text-black text-lg md:text-2xl p-2 z-50">
             <i class="fa fa-bars"></i>
         </button>
     </div>
@@ -41,8 +41,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden absolute top-12 left-0 w-full bg-white p-2 md:p-4 shadow-lg md:hidden transition-transform transform -translate-y-full z-20">
-        <button id="close-btn" class="text-black text-xl absolute top-2 right-2">×</button>
+    <div id="mobile-menu" class="hidden absolute top-12 left-0 w-full bg-white p-2 md:p-4 shadow-lg md:hidden transition-all duration-300 ease-in-out transform -translate-y-full z-40">
+        <button id="close-btn" class="text-black text-xl absolute top-2 right-2 z-50">×</button>
         <ul class="flex flex-col gap-2 font-racing text-sm">
             <li><a href="index.html" class="text-black hover:text-gray-500">Home</a></li>
             <li><a href="marketplace.html" class="text-black hover:text-gray-500">Marketplace</a></li>
@@ -66,21 +66,33 @@
             const mobileMenu = document.getElementById("mobile-menu");
             const closeBtn = document.getElementById("close-btn");
 
-            if (menuBtn && mobileMenu && closeBtn) {
-                console.log("Menu button and mobile menu initialized");
-                menuBtn.addEventListener("click", () => {
-                    console.log("Menu button clicked");
-                    mobileMenu.classList.toggle("hidden");
-                    mobileMenu.classList.toggle("translate-y-0");
-                });
-
-                closeBtn.addEventListener("click", () => {
-                    console.log("Close button clicked");
-                    mobileMenu.classList.add("hidden");
-                    mobileMenu.classList.remove("translate-y-0");
-                });
-            } else {
+            if (!menuBtn || !mobileMenu || !closeBtn) {
                 console.error("One or more elements (menu-btn, mobile-menu, close-btn) not found");
+                return;
+            }
+
+            console.log("Menu script initialized");
+
+            // Handle click and touch events for menu button
+            menuBtn.addEventListener("click", toggleMenu);
+            menuBtn.addEventListener("touchstart", toggleMenu);
+
+            // Handle click and touch events for close button
+            closeBtn.addEventListener("click", closeMenu);
+            closeBtn.addEventListener("touchstart", closeMenu);
+
+            function toggleMenu(event) {
+                event.preventDefault();
+                console.log("Menu button clicked/touched");
+                mobileMenu.classList.toggle("hidden");
+                mobileMenu.classList.toggle("translate-y-0");
+            }
+
+            function closeMenu(event) {
+                event.preventDefault();
+                console.log("Close button clicked/touched");
+                mobileMenu.classList.add("hidden");
+                mobileMenu.classList.remove("translate-y-0");
             }
         });
     </script>
