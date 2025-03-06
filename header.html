@@ -41,7 +41,7 @@
     </div>
 
     <!-- Menu Mobile -->
-    <div id="mobile-menu" class="hidden bg-white p-4 md:hidden">
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white p-4 shadow-lg md:hidden transition-transform transform -translate-y-full">
         <ul class="flex flex-col gap-4 font-racing">
             <li><a href="index.html" class="text-black">Home</a></li>
             <li><a href="marketplace.html" class="text-black">Marketplace</a></li>
@@ -61,7 +61,10 @@
     <!-- Script pour le menu mobile -->
     <script>
         document.getElementById("menu-btn").addEventListener("click", function() {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("translate-y-0");
         });
     </script>
 </header>
+
