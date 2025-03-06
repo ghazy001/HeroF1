@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Teams</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Lien vers Google Fonts pour la police Racing One -->
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Lien vers le fichier CSS externe si nécessaire -->
-    <link rel="stylesheet" href="public/output.css">
-    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0-alpha.2/dist/tailwind.min.js"></script>
+    <title>Hero1</title>
 </head>
 <div id="header-placeholder"></div>
 <script>
@@ -19,105 +17,89 @@
         .then(response => response.text())
         .then(data => document.getElementById("header-placeholder").innerHTML = data);
 </script>
-<body class="bg-black text-white font-sans text-center m-0 py-5">
-
-<div id="header"></div>
-
-<!-- Application de la police Racing One pour le titre -->
-<h1 class="text-3xl font-bold mb-8" style="font-family: 'Racing Sans One', sans-serif;">F1 TEAMS</h1>
-
-<div class="flex flex-wrap justify-center max-w-[800px] mx-auto mb-20">
-    <!-- Ferrari -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-red-500 to-yellow-400">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[200px]">Ferrari</span>
-            <img class="w-10 h-auto" src="ressources/images/ferrari-logo-removebg-preview.png" alt="Logo Ferrari">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/ferrari.avif" alt="Ferrari">
-    </div>
-
-    <!-- Mercedes -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-green-500 to-green-900">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[200px]">Mercedes</span>
-            <img class="w-10 h-auto" src="ressources/images/mercedes-logo-removebg-preview.png" alt="Logo Mercedes">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1 rotate-270" src="ressources/images/mercedes.png" alt="Mercedes">
-    </div>
-
-    <!-- Racing Bulls -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-blue-500 to-indigo-300">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[160px]">Racing Bulls</span>
-            <img class="w-10 h-auto" src="ressources/images/racing-bulls-logo-removebg-preview.png" alt="Logo Racing Bulls">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/racing-bulls.avif" alt="Racing Bulls">
-    </div>
-
-    <!-- Alpine -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-blue-300 to-blue-900">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[200px]">Alpine</span>
-            <img class="w-10 h-auto" src="ressources/images/alpine-logo-removebg-preview.png" alt="Logo Alpine">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/alpine.png" alt="Alpine">
-    </div>
-
-    <!-- McLaren -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-orange-500 to-yellow-800">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[180px]">McLaren</span>
-            <img class="w-10 h-auto" src="ressources/images/mclaren-logo-removebg-preview.png" alt="Logo McLaren">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/mclaren.avif" alt="McLaren">
-    </div>
-
-    <!-- Red Bull Racing -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-blue-500 to-indigo-300">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[120px]">Red Bull Racing</span>
-            <img class="w-10 h-auto" src="ressources/images/red-bull-racing-logo-removebg-preview.png" alt="Logo Red Bull Racing">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/red-bull-racing.png" alt="Red Bull Racing">
-    </div>
-
-    <!-- Aston Martin -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-green-500 to-green-900">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[135px]">Aston Martin</span>
-            <img class="w-10 h-auto" src="ressources/images/aston-martin-logo-removebg-preview.png" alt="Logo Aston Martin">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/aston-martin.avif" alt="Aston Martin">
-    </div>
-
-    <!-- Williams -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-blue-500 to-blue-700">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[200px]">Williams</span>
-            <img class="w-10 h-auto" src="ressources/images/williams-logo-removebg-preview.png" alt="Logo Williams">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/williams.png" alt="Williams">
-    </div>
-
-    <!-- Haas -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-gray-500 to-black">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[200px]">Haas</span>
-            <img class="w-10 h-auto" src="ressources/images/haas-logo-removebg-preview.png" alt="Logo Haas">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/haas.avif" alt="Haas">
-    </div>
-
-    <!-- Kick Sauber -->
-    <div class="flex flex-col items-center text-center w-[45%] m-2 p-3 rounded-lg relative bg-gradient-to-r from-green-400 to-green-950">
-        <div class="flex items-center justify-center mb-2">
-            <span class="font-bold text-lg mr-[160px]">Kick Sauber</span>
-            <img class="w-10 h-auto" src="ressources/images/kick-sauber-logo-removebg-preview.png" alt="Logo Kick Sauber">
-        </div>
-        <img class="w-full max-w-[180px] rounded-md mt-1" src="ressources/images/kick-sauber.png" alt="Kick Sauber">
-    </div>
+<body class="bg-white    ">
+<!-- Banner Image -->
+<div class="w-full flex justify-center my-4">
+    <img src="ressources/assets/bar.png" alt="Banner" class="w-full max-w-6xl rounded-lg">
 </div>
+<!-- Top Stories -->
+<section class="max-w-6xl mx-auto my-6 p-6 border-4 border-primary rounded-lg">
+    <h2 class="text-xl font-racing italic">TOP STORIES <span class="border-b-4 border-primary block w-16"></span></h2>
+    <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="col-span-2 relative">
+            <img src="ressources/assets/image1.png" alt="Helmet" class="w-full rounded">
+            <p class="absolute top-55 left-2 bg-white p-2 text-1xl font-race bold">Lewis Hamilton was in high spirits as he reflected on the first few pages of his new chapter at Ferrari,
+                explaining that things “couldn’t have gone any better” since arriving in Maranello last month
+                This week, following a filming day at Fiorano, Hamilton got his first proper taste of Ferrari’s new SF-25 challenger during pre-season testing in Bahrain, with the seven-time World Champion setting the pace on the second morning of action.
+                “I think it’s a bit early to say, but I am really enjoying the car,” said Hamilton, when asked in a subsequent press conference if his first Ferrari feels better than the last Mercedes he drove in 2024.
+                “We’re slowly bonding, I think.”As for pushing the car to its limits, he added: “I mean, that’s what these days are about. It’s about exploring. At the moment, I think there’s still room to explore more.</p>
+        </div>
+        <div class="grid grid-rows-2 gap-2">
+            <div class="border border-gray-300 p-2">
+                <img src="ressources/assets/image2.png" alt="Driver" class="w-full rounded">
+                <p class="text-s text-primary font-bold mt-1">NEWS</p>
+                <p class="text-xs">Max Verstappen once again added his name to the history books in 2024 by becoming one of an elite group of drivers to win four world championships.</p>
+            </div>
+            <div class="border border-gray-300 p-2">
+                <img src="ressources/assets/image3.png" alt="Driver" class="w-full rounded">
+                <p class="text-s text-primary font-bold mt-1">NEWS</p>
+                <p class="text-xs">George Russell ended the third and final day of pre-season testing in Bahrain on top, the Mercedes man having just pipped Max Verstappen to P1 in the dying moments of the three-day test.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Tickets Section -->
+<section class="max-w-6xl mx-auto my-6 p-6 border-4 border-black rounded-lg flex items-center justify-between">
+    <!-- Texte et Bouton à gauche -->
+    <div class="flex flex-col items-start">
+        <h2 class="text-3xl font-extrabold italic leading-tight">
+            GET YOUR TICKETS <br> NOW !!
+        </h2>
+        <a href="Tickets.html" class="bg-primary text-white  font-racing font-bold px-6 py-3 rounded  transition duration-300">
+            BUY
+        </a>
+    </div>
+
+    <!-- Image du ticket à droite -->
+    <div>
+        <img src="ressources/assets/ticket-image.png" alt="F1 Ticket" class="w-100 rounded-lg">
+    </div>
+</section>
+
+
+<!-- Recent Drops -->
+<section class="max-w-6xl mx-auto my-6 p-6 border-4 border-primary rounded-lg ">
+    <h2 class="text-xl font-racing italic">RECENT DROPS <span class="border-b-4 border-primary block w-16"></span></h2>
+    <div class="grid grid-cols-4 gap-4 mt-4">
+        <div class="text-center">
+            <img src="ressources/assets/cap1.png" alt="RedBull Hat" class="w-full rounded">
+            <p class="font-bold">RedBull Hat</p>
+            <p>100 DT</p>
+        </div>
+        <div class="text-center">
+            <img src="ressources/assets/cap2.png" alt="Redbull Hat" class="w-full rounded">
+            <p class="font-bold">RedBull Hat</p>
+            <p>100 DT</p>
+        </div>
+        <div class="text-center">
+            <img src="ressources/assets/jacket1.png" alt="RedBull Jacket" class="w-full rounded">
+            <p class="font-bold">RedBull Jacket 1</p>
+            <p>250 DT</p>
+        </div>
+        <div class="text-center">
+            <img src="ressources/assets/jacket2.png" alt="Jacket RedBull" class="w-full rounded">
+            <p class="font-bold">Jacket RedBull V3</p>
+            <p>250 DT</p>
+        </div>
+
+    </div>
+    <div class="mt-8 text-center">
+        <a href="marketPlace.html" class="bg-primary text-white font-racing font px-6 py-3 rounded inline-block hover:bg-red-700 transition duration-300">
+            Shop Now
+        </a>
+    </div>
+</section>
 <div id="footer-placeholder"></div>
 <script>
     fetch("footer.html")
@@ -126,5 +108,4 @@
 </script>
 
 </body>
-
 </html>
