@@ -32,14 +32,14 @@ Ce projet utilise **Tailwind CSS** pour un design moderne et responsive.
 ### 🔧 1️⃣ Installation de Tailwind CSS
 Si Tailwind n'est pas encore installé, exécutez :
 ```sh
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm install -D tailwindcss@3
+npx tailwindcss init 
 ```
 
 Ajoutez la configuration suivante dans `tailwind.config.js` :
 ```js
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  content: [*.{html}],
   theme: {
     extend: {},
   },
