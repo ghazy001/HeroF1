@@ -60,10 +60,12 @@
 
     <!-- Script for Mobile Menu -->
     <script>
+      
         document.getElementById("menu-btn").addEventListener("click", function() {
-            const mobileMenu = document.getElementById("mobile-menu");
-            mobileMenu.classList.toggle("hidden");
-            mobileMenu.classList.toggle("translate-y-0");
-        });
+    const mobileMenu = document.getElementById("mobile-menu");
+    console.log("Menu button clicked");
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("translate-y-0");
+});
     </script>
 </header>
