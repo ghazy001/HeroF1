@@ -5,29 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketplace</title>
     <link rel="stylesheet" href="public/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<div id="header-placeholder"></div>
-<script>
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("header-placeholder").innerHTML = data);
-</script>
-<body class="bg-white font-racing">
+<body class="bg-white font-sans">
+
+<div id="header"></div>
+
 <div class="my-6">
-    <img src="ressources/assets/bar.png" alt="Banner" class="w-full max-w-6xl rounded-lg"></div>
+    <img src="ressources/Frame%2027.png" alt="Banner">
+</div>
 
 <!-- Main Content -->
-<section class="container mx-auto p-8">
+<main class="container mx-auto p-8">
     <h1 class="text-2xl font-racing font-bold text-title" >MARKETPLACE</h1>
 
     <div class="flex justify-end mb-4">
-        <a href="form.html" class="bg-secondary text-title px-4 py-2 rounded hover:bg-tertiary hover:text-secondary flex items-center">
-            <i class="fas fa-shopping-cart mr-2"></i>
+        <button class="bg-secondary text-title px-4 py-2 rounded hover:bg-tertiary hover:text-secondary flex items-center">
+            <i class="fas fa-shopping-cart mr-2"> </i>
             My Cart
             <span class="ml-2 bg-primary text-secondary rounded-full w-5 h-5 flex items-center justify-center">0</span>
-        </a>
+        </button>
     </div>
 
     <!-- Featured Product -->
@@ -39,7 +35,7 @@
 
             <!-- Front Card - moved slightly down -->
             <div class="relative top-4 w-full h-full bg-white shadow-lg flex flex-col justify-center items-center">
-                <img src="ressources/pngwing.com.png" alt="Product Image" class="w-[500px] h-48 object-contain">
+                <img src="/ressources/pngwing.com.png" alt="Product Image" class="w-[500px] h-48 object-contain">
 
                 <div class="text-center mt-4">
                     <p class="text-gray-500 text-sm">drops in</p>
@@ -96,14 +92,21 @@
             <p class="text-gray-600">250 DT</p>
             <button class="mt-2 bg-primary text-secondary px-4 py-2 rounded hover:bg-tertiary">Add to Cart</button>
         </div>
+    </div>
+</main>
 
-</section>
+<div id="footer"></div>
 
-<div id="footer-placeholder"></div>
 <script>
-    fetch("footer.html")
+    fetch('header.html')
         .then(response => response.text())
-        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </body>
 </html>
