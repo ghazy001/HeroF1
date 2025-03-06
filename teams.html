@@ -1,55 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 Teams</title>
-
-    <!-- Google Fonts -->
+    <!-- Google Fonts for Racing Sans One -->
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Output File -->
+    <link href="../public/output.css" rel="stylesheet">
 </head>
+<body class="bg-black text-white font-sans m-0 py-5 md:py-8">
 
-<body class="bg-black text-white font-sans text-center py-5">
-    
+    <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
+
+    <!-- Load Header Dynamically -->
     <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("header-placeholder").innerHTML = data);
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data)
+                .catch(error => console.error("Error loading header.html:", error));
+        });
     </script>
-    
-    <h1 class="text-3xl font-bold mb-8" style="font-family: 'Racing Sans One', sans-serif;">F1 TEAMS</h1>
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5 max-w-6xl mx-auto">
-        <!-- Exemple d'équipe (copie-colle pour les autres équipes en changeant les images et couleurs) -->
-        <div class="flex flex-col items-center text-center p-4 rounded-lg bg-gradient-to-r from-red-500 to-yellow-400">
+
+    <!-- Title -->
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-racing text-center">F1 TEAMS</h1>
+
+    <!-- Teams Grid -->
+    <div class="flex flex-wrap justify-center max-w-[800px] mx-auto mb-12 md:mb-20 px-4">
+        <!-- Ferrari -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-red-500 to-yellow-400">
             <div class="flex items-center justify-between w-full mb-2">
-                <span class="font-bold text-lg">Ferrari</span>
-                <img class="w-10 h-auto" src="ressources/images/ferrari-logo-removebg-preview.png" alt="Ferrari Logo">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Ferrari</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/ferrari-logo-removebg-preview.png" alt="Logo Ferrari">
             </div>
-            <img class="w-full max-w-[180px] rounded-md" src="ressources/images/ferrari.avif" alt="Ferrari">
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/ferrari.avif" alt="Ferrari">
         </div>
-        
-        <div class="flex flex-col items-center text-center p-4 rounded-lg bg-gradient-to-r from-green-500 to-green-900">
+
+        <!-- Mercedes -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-900">
             <div class="flex items-center justify-between w-full mb-2">
-                <span class="font-bold text-lg">Mercedes</span>
-                <img class="w-10 h-auto" src="ressources/images/mercedes-logo-removebg-preview.png" alt="Mercedes Logo">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Mercedes</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/mercedes-logo-removebg-preview.png" alt="Logo Mercedes">
             </div>
-            <img class="w-full max-w-[180px] rounded-md" src="ressources/images/mercedes.png" alt="Mercedes">
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1 rotate-270" src="ressources/images/mercedes.png" alt="Mercedes">
         </div>
-        
-        <!-- Ajoute ici les autres équipes en suivant le même modèle -->
+
+        <!-- Racing Bulls -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-300">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Racing Bulls</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/racing-bulls-logo-removebg-preview.png" alt="Logo Racing Bulls">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/racing-bulls.avif" alt="Racing Bulls">
+        </div>
+
+        <!-- Alpine -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-blue-300 to-blue-900">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Alpine</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/alpine-logo-removebg-preview.png" alt="Logo Alpine">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/alpine.png" alt="Alpine">
+        </div>
+
+        <!-- McLaren -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-800">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">McLaren</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/mclaren-logo-removebg-preview.png" alt="Logo McLaren">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/mclaren.avif" alt="McLaren">
+        </div>
+
+        <!-- Red Bull Racing -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-300">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Red Bull Racing</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/red-bull-racing-logo-removebg-preview.png" alt="Logo Red Bull Racing">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/red-bull-racing.png" alt="Red Bull Racing">
+        </div>
+
+        <!-- Aston Martin -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-900">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Aston Martin</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/aston-martin-logo-removebg-preview.png" alt="Logo Aston Martin">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/aston-martin.avif" alt="Aston Martin">
+        </div>
+
+        <!-- Williams -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Williams</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/williams-logo-removebg-preview.png" alt="Logo Williams">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/williams.png" alt="Williams">
+        </div>
+
+        <!-- Haas -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-gray-500 to-black">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Haas</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/haas-logo-removebg-preview.png" alt="Logo Haas">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/haas.avif" alt="Haas">
+        </div>
+
+        <!-- Kick Sauber -->
+        <div class="flex flex-col items-center text-center w-full sm:w-[45%] m-2 p-3 rounded-lg bg-gradient-to-r from-green-400 to-green-950">
+            <div class="flex items-center justify-between w-full mb-2">
+                <span class="font-bold text-base sm:text-lg md:text-xl font-racing">Kick Sauber</span>
+                <img class="w-8 h-auto sm:w-10" src="ressources/images/kick-sauber-logo-removebg-preview.png" alt="Logo Kick Sauber">
+            </div>
+            <img class="w-full max-w-[150px] sm:max-w-[180px] rounded-md mt-1" src="ressources/images/kick-sauber.png" alt="Kick Sauber">
+        </div>
     </div>
 
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
+
+    <!-- Load Footer Dynamically -->
     <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+                .catch(error => console.error("Error loading footer.html:", error));
+        });
     </script>
 </body>
 </html>
