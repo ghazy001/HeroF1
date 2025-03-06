@@ -21,8 +21,15 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
-<object type="text/html" data="./header.html" class="h-full w-full"></object>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<body class="bg-white font-racing">
+
+
 
 <!-- Header Section -->
 <header class="p-4 shadow-md">
@@ -140,10 +147,13 @@
     <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">More</button>
 </div>
 
-<!-- Footer -->
-<footer >
-    <object type="text/html" data="./footer.html" class="w-full h-screen"></object>
-</footer>
 
+
+<div id="footer-placeholder"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
 </body>
 </html>
