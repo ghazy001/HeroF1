@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Driver Standings</title>
+    <link href="public/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Righteous', sans-serif;
+            color: #000; /* Texte en noir */
+            font-weight: normal; /* Forcer un poids plus léger */
+        }
+    </style>
+</head>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<body class="w-full items-center">
+<div class="bg-white p-4 rounded-lg shadow-lg">
+    <!-- Header Image -->
+    <img src="ressources/images/race.jpg" alt="Formula 1 Race" class="w-full rounded-t-lg mb-4">
+
+    <!-- Title -->
+    <h1 class="text-2xl font-bold mb-4 text-center">2024 Driver Standings</h1>
+
+    <!-- Driver Standings -->
+    <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12 md:col-span-8 md:col-start-3 space-y-2">
+            <div class="flex items-center p-2 border-b border-gray-300 bg-sky-100">
+                <span class="w-6 font-bold mx-2 text-gray-500">5</span>
+                <a href="driverdetails.html">
+                    <img src="ressources/images/carlos.png" alt="Carlos Sainz Jr." class="w-10 h-10 rounded-full mx-2">
+                </a>
+                <span class="flex-grow">Carlos Sainz Jr.</span>
+                <span class="font-bold text-gray-700">292</span>
+            </div>
+            <div class="flex items-center p-2 border-b border-gray-300">
+                <img src="ressources/images/1.png" alt="1" class="w-9 h-9 rounded-full ml-[-8px] mr-4 ">
+                <img src="ressources/images/max.png" alt="Max Verstappen" class="w-9 h-9 rounded-full mx-2 ">
+                <span class="flex-grow">Max Verstappen</span>
+                <span class="font-bold text-gray-700">437</span>
+            </div>
+            <div class="flex items-center p-2 border-b border-gray-300">
+                <img src="ressources/images/2.png" alt="Lando Norris" class="w-9 h9 rounded-full ml-[-8px] mr-4">
+                <img src="ressources/images/lando.png" alt="Lando Norris" class="w-10 h-10 rounded-full mx-2">
+                <span class="flex-grow">Lando Norris</span>
+                <span class="font-bold text-gray-700">374</span>
+            </div>
+            <div class="flex items-center p-2 border-b border-gray-300">
+                <img src="ressources/images/3.png" alt="3" class="w-9 h9 rounded-full ml-[-8px] mr-4">
+                <img src="ressources/images/leclerc.png" alt="Charles Leclerc" class="w-10 h-10 rounded-full mx-2">
+                <span class="flex-grow">Charles Leclerc</span>
+                <span class="font-bold text-gray-700">356</span>
+            </div>
+            <div class="flex items-center p-2 border-b border-gray-300">
+                <span class="w-6 font-bold mx-2 text-gray-500">5</span>
+                <img src="ressources/images/oscar.png" alt="Oscar Piastri" class="w-10 h-10 rounded-full mx-2">
+                <span class="flex-grow">Oscar Piastri</span>
+                <span class="font-bold text-gray-700">292</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer-placeholder"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Hero1</title>
+</head>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<body class="bg-white text-black">
+    <div class="container mx-auto p-6 flex flex-col items-center">
+        <div class="relative bg-blue-900 p-6 rounded-lg text-white w-full max-w-6xl flex items-center">
+            <div class="w-1/3 relative">
+                <h2 class="text-3xl font-bold">Driver Details</h2>
+                <div class="text-[200px] font-bold opacity-10">55</div>
+            </div>
+            <div class="w-2/3 flex items-center gap-6">
+                <img src="ressources/assets/driver-image.png" alt="Driver" class="w-80 rounded-lg">
+                <div>
+                    <div class="bg-blue-700 p-4 rounded-lg mb-4 opacity-80">
+                        <p class="text-sm">FULL NAME</p>
+                        <p class="text-lg font-bold">Carlos Sainz Jr.</p>
+                        <p class="text-sm">1 September 1994 (age 30)</p>
+                        <p class="text-sm">Spanish</p>
+                    </div>
+                    <div class="bg-blue-700 p-4 rounded-lg opacity-80">
+                        <p class="text-sm font-bold">Skills</p>
+                        <p>Technical: 85</p>
+                        <p>Racecraft: 80</p>
+                        <p>Physical & Mental: 90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6 mt-6 w-full max-w-6xl">
+            <div class="bg-gray-200 p-4 rounded-lg text-black">
+                <p class="text-sm font-bold">Status</p>
+                <p>Active</p>
+                <p>2015 - Present</p>
+                <p>Best Finish: 5th (282pts)</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-lg text-black">
+                <p class="text-sm font-bold">Poles / Wins / Races</p>
+                <p>Poles: 4</p>
+                <p>Wins: 6</p>
+                <p>Races: 205</p>
+                <p>Fastest Laps: 26</p>
+                <p>Podiums: 4</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-lg text-black">
+                <p class="text-sm font-bold">Event Wins</p>
+                <p>2023 Australian GP</p>
+                <p>2024 Abu Dhabi GP</p>
+                <p>2024 Mexico City GP</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
+</body>
+</html>

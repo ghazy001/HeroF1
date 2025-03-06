@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Your Ticket - Grand Prix 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body class="bg-gray-100 font-sans">
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+
+
+    <!-- Ticket Section -->
+    <section class="max-w-4xl mx-auto bg-white p-8 mt-10 shadow-md">
+        <h1 class="text-4xl font-bold text-center mb-6">BUY YOUR TICKET</h1>
+        <h2 class="text-xl font-semibold mb-4">Select your Grand Prix 2025</h2>
+
+        <div class="border-2 border-gray-300 p-4 mb-6">
+            <h3 class="text-lg font-semibold">Paddock Club Package</h3>
+            <p class="text-gray-700">995 DT per person</p>
+            <p class="text-gray-700">Physical ticket</p>
+            <p class="text-primary">4 tickets remaining</p>
+
+            <!-- Quantity Selector -->
+            <div class="flex items-center space-x-4 mt-4">
+                <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded">-</button>
+                <span class="text-xl">2</span>
+                <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded">+</button>
+            </div>
+        </div>
+
+        <!-- Price Details -->
+        <div class="mb-6">
+            <p class="text-lg">Price per person: <span class="font-semibold">995 DT</span></p>
+            <p class="text-lg">Booking Fee: <span class="font-semibold">60 DT</span></p>
+            <p class="text-lg">Delivery: <span class="font-semibold text-green-600">FREE</span></p>
+            <p class="text-2xl font-bold">Total: 2052 DT</p>
+        </div>
+
+        <!-- Book Now Button -->
+        <button class="w-full bg-primary text-white py-3 rounded text-xl font-semibold hover:bg-red-700">
+            BOOK NOW
+        </button>
+    </section>
+
+    <!-- Description Section -->
+    <section class="max-w-4xl mx-auto p-8 mt-6 text-gray-700">
+        <h2 class="text-2xl font-bold mb-4">Paddock Club Hospitality - What's Included?</h2>
+        <ul class="list-disc ml-6 space-y-2">
+            <li>Access to Friday, Saturday and Sunday racing</li>
+            <li>Premium views of the Pit Lane and the Start/Finish line</li>
+            <li>All-day Open bar serving F1® Team wines, beers, soft drinks, tea & coffee</li>
+            <li>Gourmet luncheon starting with a plated starter, followed by a sumptuous buffet</li>
+            <li>F1® Team walkabout at specially allocated times</li>
+            <li>Hosting and entertainment</li>
+            <li>Access to the hospitality lounge, where guests can mingle in the hospitality area which is fully equipped with TV screens, bar and lounge area</li>
+            <li>Paddock Club Entertainment, including Paddock Club guests’ Parade Truck Tour, F1® Simulators, F1® Pit Stop Challenge plus more</li>
+        </ul>
+    </section>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
+
+</body>
+</html>

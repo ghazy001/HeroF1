@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Hero1</title>
+</head>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<body class="bg-white font-racing ">
+<!-- F1 Image -->
+<div class="w-full flex justify-center ">
+    <img src="ressources/assets/f1.png" alt="F1" class="w-full max-w-screen-xxl ">
+</div>
+
+
+<!-- F1 Circuits Section -->
+<section class="py-12 px-6 text-center">
+    <h1 class="text-4xl font-bold text-red-600 italic  font-racing">F1 Circuits</h1>
+    <h2 class="text-xl  mt-2  font-race">2024 Saison</h2>
+
+    <!-- Grid Layout for Circuits -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-8 px-4">
+
+    <!-- Single Circuit Card -->
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/abu-dhabi-icon.png" alt="Abu Dhabi" class="w-14 h-14 mb-2">
+            <h3 class="font-racing flex items-center">Abu Dhabi
+                <img src="https://flagcdn.com/w40/ae.png" class="w-3 h-3 ml-2" alt="UAE Flag">
+            </h3>
+
+            <p class="text-sm text-gray-400">Yas Marina Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/austria-icon.png" alt="Australia" class="w-14 h-14 mb-2">
+              <h3 class=" font-racing flex items-center">Australia <img src="https://flagcdn.com/w40/au.png" class="w-3 h-3 ml-2 " alt="Au Flag">
+              </h3>
+            <p class="text-sm text-gray-400">Albert Park Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/austria-icon.png" alt="Austria" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Austria
+                  <img src="https://flagcdn.com/w40/at.png" class="w-3 h-3 ml-2" alt="At Flag"></h3>
+            <p class="text-sm text-gray-400">Red Bull Ring</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/azerbaijan-icon.png" alt="Azerbaijan" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Azerbaijan
+                  <img src="https://flagcdn.com/w40/az.png" class="w-3 h-3 ml-2" alt="Az Flag"></h3>
+            <p class="text-sm text-gray-400">Baku City Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/bahrain-icon.png" alt="Bahrain" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Bahrain
+                  <img src="https://flagcdn.com/w40/bh.png" class="w-3 h-3 ml-2" alt="BH Flag"></h3>
+            <p class="text-sm text-gray-400">Bahrain Int. Circuit</p>
+        </div>
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/belgium-icon.png" alt="belgium" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Belgium
+                  <img src="https://flagcdn.com/w40/be.png" class="w-3 h-3 ml-2" alt="Be Flag"></h3>
+            <p class="text-sm text-gray-400">Circuit de Spa-Francorchamps</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/brazil-icon.png" alt="brazil" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Brazil
+                  <img src="https://flagcdn.com/w40/br.png" class="w-3 h-3 ml-2" alt="BR Flag"></h3>
+            <p class="text-sm text-gray-400">Autódromo José Carlos Pace</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/canada-icon.png" alt="canada" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Canada
+                  <img src="https://flagcdn.com/w40/ca.png" class="w-3 h-3 ml-2" alt="CA Flag"></h3>
+            <p class="text-sm text-gray-400">Circuit Gilles-Villeneuve</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/China-icon.png" alt="china" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">China
+                  <img src="https://flagcdn.com/w40/ch.png" class="w-3 h-3 ml-2" alt="CH Flag"></h3>
+            <p class="text-sm text-gray-400">Shanghai International Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/netherlands-icon.png" alt="netherlands" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Netherlands
+                  <img src="https://flagcdn.com/w40/nl.png" class="w-3 h-3 ml-2" alt="NL Flag"></h3>
+            <p class="text-sm text-gray-400">Circuit Zandvoort</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/Emilia-Romagna-icon.png" alt="ER" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Emilia Romagna GP
+                  <img src="https://flagcdn.com/w40/it.png" class="w-3 h-3 ml-2" alt="IT Flag"></h3>
+            <p class="text-sm text-gray-400">Autodromo Enzo e Dino Ferrari</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/Great-Britain-icon.png" alt="GB" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Great Britain 🇬🇧
+                  <img src="https://flagcdn.com/w40/gb.png" class="w-3 h-3 ml-2" alt="GB Flag"></h3>
+            <p class="text-sm text-gray-400">Silverstone Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/hungary-icon.png" alt="hungary" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Hungary
+                  <img src="https://flagcdn.com/w40/hu.png" class="w-3 h-3 ml-2" alt="HU Flag"></h3>
+            <p class="text-sm text-gray-400">Hungaroring</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/italy-icon.png" alt="italy" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Italy
+                  <img src="https://flagcdn.com/w40/it.png" class="w-3 h-3 ml-2" alt="IT Flag"></h3>
+            <p class="text-sm text-gray-400">Autodromo Nazionale Monza</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/japan-icon.png" alt="japan" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Japan
+                  <img src="https://flagcdn.com/w40/jp.png" class="w-3 h-3 ml-2" alt="JP Flag"></h3>
+            <p class="text-sm text-gray-400">Suzuka International Racing Course</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/las-vegas-icon.png" alt="LasVegas" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Las Vegas
+                  <img src="https://flagcdn.com/w40/us.png" class="w-3 h-3 ml-2" alt="US Flag"></h3>
+            <p class="text-sm text-gray-400">The Las Vegas Strip</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/mexico-icon.png" alt="mexico" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Mexico
+                  <img src="https://flagcdn.com/w40/mx.png" class="w-3 h-3 ml-2" alt="mx Flag"></h3>
+            <p class="text-sm text-gray-400">Autódromo Hermanos Rodríguez</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/miami-icon.png" alt="miami" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Miami
+                  <img src="https://flagcdn.com/w40/us.png" class="w-3 h-3 ml-2" alt="US Flag"></h3>
+            <p class="text-sm text-gray-400">Miami International Autodrome</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/monaco-icon.png" alt="monaco" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Monaco GP
+                  <img src="https://flagcdn.com/w40/mc.png" class="w-3 h-3 ml-2" alt="MC Flag"></h3>
+            <p class="text-sm text-gray-400">Circuit de Monaco</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/qatar-icon.png" alt="qatar" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Qatar GP
+                  <img src="https://flagcdn.com/w40/qa.png" class="w-3 h-3 ml-2" alt="qt Flag"></h3>
+            <p class="text-sm text-gray-400">Lusail International Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/saudi-arbian-icon.png" alt="SaudiArbian" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Saudi Arabian GP
+                  <img src="https://flagcdn.com/w40/sa.png" class="w-3 h-3 ml-2" alt="SA Flag"></h3>
+            <p class="text-sm text-gray-400">Jeddah Corniche Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/singapore-icon.png" alt="singapore" class="w-14 h-14 mb-2">
+              <h3 class="font-racing flex items-center">Singapore
+                  <img src="https://flagcdn.com/w40/sg.png" class="w-3 h-3 ml-2" alt="sg Flag"></h3>
+            <p class="text-sm text-gray-400">Marina Bay Street Circuit</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/spain-icon.png" alt="spain" class="w-14 h-14 mb-2">
+              <h3 class=" font-racing flex items-center">Spain
+                  <img src="https://flagcdn.com/w40/es.png" class="w-3 h-3 ml-2" alt="Es Flag"></h3>
+            <p class="text-sm text-gray-400">Circuit de Barcelona</p>
+        </div>
+
+        <div class="bg-gray-900 text-white p-4 rounded-lg flex flex-col items-center">
+            <img src="ressources/assets/circuits/United-States-icon.png" alt="US" class="w-14 h-14 mb-2">
+              <h3 class=" font-racing flex items-center">United States
+                  <img src="https://flagcdn.com/w40/us.png" class="w-3 h-3 ml-2" alt="US Flag"></h3>
+            <p class="text-sm text-gray-400">Circuit of The Americas</p>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+<div id="footer-placeholder"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
+
+</body>
+</html>

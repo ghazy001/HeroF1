@@ -3,111 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Marketplace</title>
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="public/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="top-bar">
-            <div class="logo">H1</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Marketplace</a></li>
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Tickets</a></li>
-                    <li><a href="#">Streaming</a></li>
-                    <li><a href="#">Events</a></li>
-                </ul>
-            </nav>
-            <div class="user-actions">
-                <button>Sign in</button>
-                <button>Subscribe</button>
-                <input type="text" placeholder="Search...">
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<body class="bg-white font-racing">
+<div class="my-6">
+    <img src="ressources/assets/bar.png" alt="Banner" class="w-full max-w-6xl rounded-lg"></div>
+
+<!-- Main Content -->
+<section class="container mx-auto p-8">
+    <h1 class="text-2xl font-racing font-bold text-title" >MARKETPLACE</h1>
+
+    <div class="flex justify-end mb-4">
+        <a href="form.html" class="bg-secondary text-title px-4 py-2 rounded hover:bg-tertiary hover:text-secondary flex items-center">
+            <i class="fas fa-shopping-cart mr-2"></i>
+            My Cart
+            <span class="ml-2 bg-primary text-secondary rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </a>
+    </div>
+
+    <!-- Featured Product -->
+    <div class="flex items-center space-x-8">
+        <!-- Left side - Cards (image + countdown) -->
+        <div class="relative w-[600px] h-96">
+            <!-- Back Card - further left, rectangular -->
+            <div class="absolute -left-16 -top-4 w-full h-full bg-gray-200"></div>
+
+            <!-- Front Card - moved slightly down -->
+            <div class="relative top-4 w-full h-full bg-white shadow-lg flex flex-col justify-center items-center">
+                <img src="ressources/pngwing.com.png" alt="Product Image" class="w-[500px] h-48 object-contain">
+
+                <div class="text-center mt-4">
+                    <p class="text-gray-500 text-sm">drops in</p>
+                    <p class="text-3xl font-bold text-red-600">1:23:01</p>
+                </div>
             </div>
         </div>
-    </header>
 
-    <main>
-        <section class="marketplace">
-            <h1>MARKETPLACE</h1>
-            <div class="featured-product">
-                <img src="hat.png" alt="Red Bull Racing Hat">
-                <div class="countdown">Drops in <span>1:23:01</span></div>
-                <h2>Red Bull Racing Hat</h2>
-                <p>Show your passion for speed and performance with the Red Bull Racing Hat...</p>
-                <button>More</button>
-            </div>
-        </section>
-
-        <section class="recent-drops">
-            <h2>RECENT DROPS</h2>
-            <div class="products">
-                <div class="product">
-                    <span>Only 12 left</span>
-                    <img src="jacket_redbull.jpg" alt="Jacket RedBull">
-                    <h3>Jacket RedBull</h3>
-                    <p>150 DT</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="redbull_hat.jpg" alt="RedBull hat">
-                    <h3>RedBull hat</h3>
-                    <p>100 DT</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product">
-                    <span>Limit 4 orders</span>
-                    <img src="redbull_hat2.jpg" alt="RedBull Hat">
-                    <h3>RedBull Hat</h3>
-                    <p>100 DT</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="redbull_jacket1.jpg" alt="RedBull Jacket 1">
-                    <h3>RedBull Jacket 1</h3>
-                    <p>250 DT</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product">
-                    <span>Bulk only</span>
-                    <img src="jacket_redbull.jpg" alt="Jacket RedBull">
-                    <h3>Jacket RedBull</h3>
-                    <p>250 DT</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-links">
-            <div>
-                <h3>Latest</h3>
-                <ul>
-                    <li><a href="#">What is F1?</a></li>
-                    <li><a href="#">Video</a></li>
-                    <li><a href="#">Drivers</a></li>
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Schedule</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Results</h3>
-                <ul>
-                    <li><a href="#">2024 Season</a></li>
-                    <li><a href="#">Driver Standings</a></li>
-                    <li><a href="#">Constructor Standings</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Tickets</h3>
-                <ul>
-                    <li><a href="#">F1® Experiences</a></li>
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">Paddock Club</a></li>
-                </ul>
+        <!-- Right side - Text and Button -->
+        <div class="flex flex-col space-y-4">
+            <h2 class="text-2xl font-bold italic text-center">Red Bull Racing Hat</h2>
+            <p class="text-gray-600 leading-relaxed">
+                Show your passion for speed and performance with the Red Bull Racing Hat! Designed for F1 fans, this cap features the iconic Red Bull Racing logo, offering a sleek and sporty look.
+            </p>
+            <div class="flex justify-center">
+                <button class="bg-primary text-white px-6 py-2 font-bold italic w-fit rounded-[20px]">More</button>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Before Recent Drops -->
+    <div class="my-16"></div>
+
+    <!-- Recent Drops -->
+    <h2 class="text-2xl font-bold text-tertiary mb-4 font-racing text-title">RECENT DROPS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded shadow-md text-center">
+            <img src="ressources/atlas.png" alt="Jacket RedBull" class="mb-2 mx-auto bg-gray-100">
+            <h3 class="text-lg font-semibold text-tertiary">Jacket RedBull</h3>
+            <p class="text-gray-600">150 DT</p>
+            <button class="mt-2 bg-primary text-secondary px-4 py-2 rounded hover:bg-tertiary"> Add to Cart</button>
+        </div>
+        <div class="bg-white p-4 rounded shadow-md text-center relative">
+            <div class="absolute top-2 left-2 bg-gray-500 text-white text-xs px-2 py-1 rounded rounded mt-4 ml-4">
+                30%
+            </div>
+            <img src="ressources/atlas.png" alt="Jacket RedBull" class="mb-2 mx-auto bg-gray-100">
+            <h3 class="text-lg font-semibold text-tertiary">Jacket RedBull</h3>
+            <p class="text-gray-600">250 DT</p>
+            <button class="mt-2 bg-primary text-secondary px-4 py-2 rounded hover:bg-tertiary">Add to Cart</button>
+        </div>
+        <div class="bg-white p-4 rounded shadow-md text-center">
+            <img src="ressources/pngegg-13.png" alt="RedBull Hat" class="mb-2 mx-auto bg-gray-100">
+            <h3 class="text-lg font-semibold text-tertiary">RedBull Hat</h3>
+            <p class="text-gray-600">100 DT</p>
+            <button class="mt-2 bg-primary text-secondary px-4 py-2 rounded hover:bg-tertiary">Add to Cart</button>
+        </div>
+        <div class="bg-white p-4 rounded shadow-md text-center relative">
+            <div class="absolute top-2 left-2 bg-gray-500 text-white text-xs px-2 py-1 rounded mt-4 ml-4">
+                10%
+            </div>
+            <img src="ressources/atlas.png" alt="Jacket RedBull" class="mb-2 mx-auto bg-gray-100">
+            <h3 class="text-lg font-semibold text-tertiary">Jacket RedBull</h3>
+            <p class="text-gray-600">250 DT</p>
+            <button class="mt-2 bg-primary text-secondary px-4 py-2 rounded hover:bg-tertiary">Add to Cart</button>
+        </div>
+
+</section>
+
+<div id="footer-placeholder"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
 </body>
 </html>

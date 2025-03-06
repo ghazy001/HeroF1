@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Live - F1</title>
+    <link href="public/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white font-racing">
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+<!-- Load Header Dynamically -->
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data)
+        .catch(error => console.error("Error loading header.html:", error));
+</script>
+
+<div class="bg-white text-black font-bold w-full max-w-screen-lg mx-auto">
+    <!-- En-tête -->
+    <div class="flex flex-col items-start w-full">
+        <img src="ressources/images/ciruit%20icon.png" alt="Circuit Icon" class="w-full h-16 mb-4">
+        <h2 class="text-3xl font-bold text-left ml-20 font-racing">Watch Live</h2>
+    </div>
+
+    <!-- Grille des courses with 3-Column Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6 px-4 py-8 place-items-center">
+        <!-- Course 1 -->
+        <div class="flex flex-col items-center text-center bg-gray-100 p-4 rounded-lg shadow-md">
+            <img src="ressources/images/11.png" alt="Singapore GP" class="w-56 h-56 rounded-lg object-cover">
+            <h3 class="mt-4 text-lg font-bold font-racing">SINGAPORE GP</h3>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-full mt-4 text-sm hover:bg-red-700 font-racing">PLAY</button>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="flex flex-col items-center text-center bg-gray-100 p-4 rounded-lg shadow-md">
+            <img src="ressources/images/22.png" alt="Miami GP" class="w-56 h-56 rounded-lg object-cover">
+            <h3 class="mt-4 text-lg font-bold font-racing">MIAMI GP</h3>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-full mt-4 text-sm hover:bg-red-700 font-racing">PLAY</button>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="flex flex-col items-center text-center bg-gray-100 p-4 rounded-lg shadow-md">
+            <img src="ressources/images/33.png" alt="Monaco GP" class="w-56 h-56 rounded-lg object-cover">
+            <h3 class="mt-4 text-lg font-bold font-racing">MONACO GP</h3>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-full mt-4 text-sm hover:bg-red-700 font-racing">PLAY</button>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="flex flex-col items-center text-center bg-gray-100 p-4 rounded-lg shadow-md">
+            <img src="ressources/images/44.png" alt="Qatar GP" class="w-56 h-56 rounded-lg object-cover">
+            <h3 class="mt-4 text-lg font-bold font-racing">QATAR GP</h3>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-full mt-4 text-sm hover:bg-red-700 font-racing">PLAY</button>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="flex flex-col items-center text-center bg-gray-100 p-4 rounded-lg shadow-md">
+            <img src="ressources/images/55.png" alt="Bahrain GP" class="w-56 h-56 rounded-lg object-cover">
+            <h3 class="mt-4 text-lg font-bold font-racing">BAHRAIN GP</h3>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-full mt-4 text-sm hover:bg-red-700 font-racing">PLAY</button>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="flex flex-col items-center text-center bg-gray-100 p-4 rounded-lg shadow-md">
+            <img src="ressources/images/66.png" alt="Mexico GP" class="w-56 h-56 rounded-lg object-cover">
+            <h3 class="mt-4 text-lg font-bold font-racing">MEXICO GP</h3>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-full mt-4 text-sm hover:bg-red-700 font-racing">PLAY</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<!-- Load Footer Dynamically -->
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+        .catch(error => console.error("Error loading footer.html:", error));
+</script>
+</body>
+</html>

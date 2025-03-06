@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .event-card {
+            @apply w-full max-w-sm mx-auto bg-white shadow-md rounded-lg overflow-hidden mb-6;
+        }
+        .event-image {
+            @apply w-full h-48 object-cover;
+        }
+        .event-title {
+            @apply text-lg font-semibold text-black mt-2;
+        }
+        .event-date {
+            @apply text-blue-600 text-sm;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+<object type="text/html" data="./header.html" class="h-full w-full"></object>
+
+<!-- Header Section -->
+<header class="p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center max-w-5xl">
+        <h1 class="text-2xl font-bold">Upcoming Events</h1>
+        <div class="flex space-x-4">
+            <button class="bg-red-600 text-white px-8 py-2 rounded-full hover:bg-red-700">Weekdays</button>
+            <select class="border rounded-full px-8 py-2 bg-red-600 text-white">
+                <option>Event Type</option>
+            </select>
+            <select class="border rounded-full px-8 py-2 bg-red-600 text-white">
+                <option>Any Category</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<!-- Events Grid -->
+<main class="flex justify-center p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl">
+        <!-- Event 1 -->
+        <div class="event-card">
+            <img src="./images/hamilton.png" alt="JKL 2011 JJK Worldwide Concert" class="event-image">
+            <div class="p-4 flex items-center">
+                <div class="text-left mr-4">
+                    <p class="text-blue-600 font-bold text-lg leading-none">APR</p>
+                    <p class="text-black font-bold text-2xl">14</p>
+                </div>
+                <div>
+                    <h2 class="event-title">JKL 2011 JJK Worldwide Concert</h2>
+                    <p class="text-black">Barcelona</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+            <img src="./images/raceweek.png" alt="Race Week" class="event-image">
+            <div class="p-4 flex items-center">
+                <div class="text-left mr-4">
+                    <p class="text-blue-600 font-bold text-lg leading-none">AUG</p>
+                    <p class="text-black font-bold text-2xl">20</p>
+                </div>
+                <div>
+                    <h2 class="event-title">Race Week</h2>
+                    <p class="text-black">JKL Worldwide GP Barcelona</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+            <img src="./images/image%2017.png" alt="Super Junior Tour" class="event-image">
+            <div class="p-4 flex items-center">
+                <div class="text-left mr-4">
+                    <p class="text-blue-600 font-bold text-lg leading-none">SEP</p>
+                    <p class="text-black font-bold text-2xl">18</p>
+                </div>
+                <div>
+                    <h2 class="event-title">2011 Super Junior SM Town Live '10 World Tour</h2>
+                    <p class="text-black">New York City</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+            <img src="./images/mini.png" alt="Wonder Girls Tour" class="event-image">
+            <div class="p-4 flex items-center">
+                <div class="text-left mr-4">
+                    <p class="text-blue-600 font-bold text-lg leading-none">APR</p>
+                    <p class="text-black font-bold text-2xl">14</p>
+                </div>
+                <div>
+                    <h2 class="event-title">Wonder Girls 2010 Wonder Girls World Tour</h2>
+                    <p class="text-black">San Francisco</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="event-card">
+            <img src="./images/chompionship.png" alt="JKL Concert" class="event-image">
+            <div class="p-4 flex items-center">
+                <div class="text-left mr-4">
+                    <p class="text-blue-600 font-bold text-lg leading-none">AUG</p>
+                    <p class="text-black font-bold text-2xl">20</p>
+                </div>
+                <div>
+                    <h2 class="event-title">JKL 2011 JJK Worldwide Concert</h2>
+                    <p class="text-black">Barcelona</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 6 -->
+        <div class="event-card">
+            <img src="./images/barzil.png" alt="Super Junior Tour" class="event-image">
+            <div class="p-4 flex items-center">
+                <div class="text-left mr-4">
+                    <p class="text-blue-600 font-bold text-lg leading-none">SEP</p>
+                    <p class="text-black font-bold text-2xl">18</p>
+                </div>
+                <div>
+                    <h2 class="event-title">Super Junior SM Town Live '10 World Tour</h2>
+                    <p class="text-black">New York City</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- More Button -->
+<div class="container mx-auto text-center my-8">
+    <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">More</button>
+</div>
+
+<!-- Footer -->
+<footer >
+    <object type="text/html" data="./footer.html" class="w-full h-screen"></object>
+</footer>
+
+</body>
+</html>

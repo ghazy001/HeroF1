@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Hero1</title>
+</head>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<body class="bg-white    ">
+<!-- Banner Image -->
+<div class="w-full flex justify-center my-4">
+    <img src="ressources/assets/bar.png" alt="Banner" class="w-full max-w-6xl rounded-lg">
+</div>
+<!-- Top Stories -->
+<section class="max-w-6xl mx-auto my-6 p-6 border-4 border-primary rounded-lg">
+    <h2 class="text-xl font-racing italic">TOP STORIES <span class="border-b-4 border-primary block w-16"></span></h2>
+    <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="col-span-2 relative">
+            <img src="ressources/assets/image1.png" alt="Helmet" class="w-full rounded">
+            <p class="absolute top-55 left-2 bg-white p-2 text-1xl font-race bold">Lewis Hamilton was in high spirits as he reflected on the first few pages of his new chapter at Ferrari,
+                explaining that things “couldn’t have gone any better” since arriving in Maranello last month
+                This week, following a filming day at Fiorano, Hamilton got his first proper taste of Ferrari’s new SF-25 challenger during pre-season testing in Bahrain, with the seven-time World Champion setting the pace on the second morning of action.
+                “I think it’s a bit early to say, but I am really enjoying the car,” said Hamilton, when asked in a subsequent press conference if his first Ferrari feels better than the last Mercedes he drove in 2024.
+                “We’re slowly bonding, I think.”As for pushing the car to its limits, he added: “I mean, that’s what these days are about. It’s about exploring. At the moment, I think there’s still room to explore more.</p>
+        </div>
+        <div class="grid grid-rows-2 gap-2">
+            <div class="border border-gray-300 p-2">
+                <img src="ressources/assets/image2.png" alt="Driver" class="w-full rounded">
+                <p class="text-s text-primary font-bold mt-1">NEWS</p>
+                <p class="text-xs">Max Verstappen once again added his name to the history books in 2024 by becoming one of an elite group of drivers to win four world championships.</p>
+            </div>
+            <div class="border border-gray-300 p-2">
+                <img src="ressources/assets/image3.png" alt="Driver" class="w-full rounded">
+                <p class="text-s text-primary font-bold mt-1">NEWS</p>
+                <p class="text-xs">George Russell ended the third and final day of pre-season testing in Bahrain on top, the Mercedes man having just pipped Max Verstappen to P1 in the dying moments of the three-day test.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tickets Section -->
+<section class="max-w-6xl mx-auto my-6 p-6 border-4 border-black rounded-lg flex items-center justify-between">
+    <!-- Texte et Bouton à gauche -->
+    <div class="flex flex-col items-start">
+        <h2 class="text-3xl font-extrabold italic leading-tight">
+            GET YOUR TICKETS <br> NOW !!
+        </h2>
+        <a href="Tickets.html" class="bg-primary text-white  font-racing font-bold px-6 py-3 rounded  transition duration-300">
+            BUY
+        </a>
+    </div>
+
+    <!-- Image du ticket à droite -->
+    <div>
+        <img src="ressources/assets/ticket-image.png" alt="F1 Ticket" class="w-100 rounded-lg">
+    </div>
+</section>
+
+
+<!-- Recent Drops -->
+<section class="max-w-6xl mx-auto my-6 p-6 border-4 border-primary rounded-lg ">
+    <h2 class="text-xl font-racing italic">RECENT DROPS <span class="border-b-4 border-primary block w-16"></span></h2>
+    <div class="grid grid-cols-4 gap-4 mt-4">
+        <div class="text-center">
+            <img src="ressources/assets/cap1.png" alt="RedBull Hat" class="w-full rounded">
+            <p class="font-bold">RedBull Hat</p>
+            <p>100 DT</p>
+        </div>
+        <div class="text-center">
+            <img src="ressources/assets/cap2.png" alt="Redbull Hat" class="w-full rounded">
+            <p class="font-bold">RedBull Hat</p>
+            <p>100 DT</p>
+        </div>
+        <div class="text-center">
+            <img src="ressources/assets/jacket1.png" alt="RedBull Jacket" class="w-full rounded">
+            <p class="font-bold">RedBull Jacket 1</p>
+            <p>250 DT</p>
+        </div>
+        <div class="text-center">
+            <img src="ressources/assets/jacket2.png" alt="Jacket RedBull" class="w-full rounded">
+            <p class="font-bold">Jacket RedBull V3</p>
+            <p>250 DT</p>
+        </div>
+
+    </div>
+    <div class="mt-8 text-center">
+        <a href="marketPlace.html" class="bg-primary text-white font-racing font px-6 py-3 rounded inline-block hover:bg-red-700 transition duration-300">
+            Shop Now
+        </a>
+    </div>
+</section>
+<div id="footer-placeholder"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
+
+</body>
+</html>

@@ -1,124 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .billing-form {
-            width: 50%;
-        }
-        .input-field {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .order-summary {
-            width: 40%;
-            border-left: 2px solid #ccc;
-            padding-left: 20px;
-        }
-        .product {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .product img {
-            width: 50px;
-            margin-right: 10px;
-        }
-        .payment-option {
-            display: flex;
-            align-items: center;
-            margin: 5px 0;
-        }
-        .place-order {
-            background-color: red;
-            color: white;
-            padding: 10px 20px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<div id="header-placeholder"></div>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
 
-    <div class="container">
-        <!-- Billing Form -->
-        <div class="billing-form">
-            <h2>Billing Details</h2>
-            <form action="/submit-order" method="POST">
-                <label>First Name*</label>
-                <input type="text" class="input-field" name="first_name" required>
+<body class="bg-white font-sans ">
+<div class="w-full items-center ">
+    <img src="ressources/images/ciruit%20icon.png" alt="circuit" class="items-center  ">
+</div>
 
-                <label>Last Name</label>
-                <input type="text" class="input-field" name="last_name">
 
-                <label>Street Address*</label>
-                <input type="text" class="input-field" name="street_address" required>
 
-                <label>Town/City*</label>
-                <input type="text" class="input-field" name="city" required>
+<div class="container mx-auto p-8 flex flex-col items-center  ">
 
-                <label>Phone Number*</label>
-                <input type="tel" class="input-field" name="phone" required>
 
-                <label>Email Address*</label>
-                <input type="email" class="input-field" name="email" required>
 
-               
+    <div class="flex flex-wrap md:flex-nowrap gap-12 justify-center w-full max-w-5xl">
+        <!-- Formulaire de facturation -->
+        <div class="w-full md:w-2/3 p-6 bg-white ">
+            <h6 class="text-sm font-semibold mb-6 text-left">
+                <span class="text-gray-400">Marketplace</span>
+                <span class="text-black"> / Checkout</span>
+            </h6>
+            <h2 class="text-3xl font-semibold mb-6 text-left" style="font-family: 'Inter', sans-serif; margin-bottom: 30px">
+                Billing Details
+            </h2>            <form action="/soumettre-commande" method="POST">
+            <label class="block text-gray-400 font-semibold mb-2">First Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
 
-            </form>
+            <label class="block text-gray-400 font-semibold mb-2">Last Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50">
+
+            <label class="block text-gray-400 font-semibold mb-2">Street Address</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">Town/City</label>
+            <input type="text" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">Phone Number</label>
+            <input type="tel" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+
+            <label class="block text-gray-400 font-semibold mb-2">E-mail Adress</label>
+            <input type="email" class="w-full p-2 border rounded mb-4 text-lg bg-gray-50" required>
+        </form>
         </div>
 
-        <!-- Order Summary -->
-        <div class="order-summary">
-            <div class="product">
-                <img src="C:\Users\zeddi\Downloads\figma\images\pirelli_hat.png.png" alt="Pirelli Hat">
-                <span>Pirelli Hat - 80 Dt</span>
+    <!-- Récapitulatif de commande -->
+        <div class="w-full md:w-2/3 p-6 bg-white mt-32">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <img src="ressources/images/pirelli_hat.png.png" alt="Pirelli Hat" class="w-16 h-16 object-cover">
+                    <span class="text-lg ml-8">Pirelli Hat</span>
+                    <span class="text-lg ml-auto text-black">80 Dt</span>
+                </div>
+                <div class="flex justify-between items-center ">
+                    <img src="ressources/images/mercedes_tshirt.png.png" alt="Mercedes T-Shirt" class="w-16 h-16 object-cover">
+                    <span class="text-lg ml-8">Mercedes T-Shirt</span>
+                    <span class="text-lg ml-auto text-black">100 Dt</span>
+                </div>
             </div>
-            <div class="product">
-                <img src="C:\Users\zeddi\Downloads\figma\images\mercedes_tshirt.png.png" alt="Mercedes T-Shirt">
-                <span>Mercedes T-Shirt - 100 Dt</span>
+            <div class="order-summary">
+                <p class="flex justify-between text-lg mt-6"><span>Subtotal:</span> <span class="text-black">180 Dt</span></p>
+                <hr>
+                <p class="flex justify-between text-lg mt-6"><span>Shipping:</span> <span class="text-black">10 Dt</span></p>
+                <hr>
+                <p class="flex justify-between text-lg mt-8"><span>Total:</span> <span class="text-black">190 Dt</span></p>
             </div>
 
-            <hr>
-            <p>Subtotal: <strong>180 Dt</strong></p>
-            <p>Shipping: <strong>10 Dt</strong></p>
-            <p>Total: <strong>190 Dt</strong></p>
-            <h3>Payment Method</h3>
-            <p>
-            
-            </p>
-            <div class="payment-option">
-                <input type="radio" name="payment" value="bank">
-                <label>Bank <img src="C:\Users\zeddi\Downloads\figma\images\visa_mastercard.png.png" width="50" style="margin-left: 10px;"></label>
-            </div>
-            <p></p>
-            <div class="payment-option">
-                <input type="radio" name="payment" value="cash" checked>
-                <label>Cash on delivery</label>
-                <p></p>
-            </div>
-            <button type="submit" class="place-order">Place Order</button>
 
+            <!-- Paiement -->
+            <div class="flex items-center mt-6">
+                <input type="radio" name="payment" value="bank" class="mr-2">
+                <label class="text-lg">Bank</label>
+                <img src="ressources/images/visa_mastercard.png.png" width="60" class="ml-4">
+            </div>
+            <div class="flex items-center mt-4">
+                <input type="radio" name="payment" value="cash" checked class="mr-2">
+                <label class="text-lg">Cash on Delivery</label>
+            </div>
+
+            <button type="submit" class="w-64 bg-red-600 text-white p-4 font-bold rounded mt-8 text-lg" style="font-family: 'Racing Sans One', sans-serif;">
+                Place Order
+            </button>
         </div>
-        
     </div>
+</div>
 
+<div id="footer-placeholder"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
 </body>
 </html>
