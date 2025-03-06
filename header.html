@@ -9,10 +9,11 @@
             <button class="signup-btn bg-white text-primary font-racing border-2 border-primary px-2 py-1 md:px-4 md:py-2 text-sm md:text-base rounded-full">Sign Up</button>
         </div>
 
-        <!-- Menu Burger for Mobile -->
-        <button id="menu-btn" class="md:hidden text-black text-lg md:text-2xl p-2 z-50">
+        <!-- Menu Burger Checkbox for Mobile -->
+        <label for="menu-toggle" class="md:hidden text-black text-lg md:text-2xl p-2 cursor-pointer z-50">
             <i class="fa fa-bars"></i>
-        </button>
+        </label>
+        <input type="checkbox" id="menu-toggle" class="hidden">
     </div>
 
     <!-- Bottom Bar (Red) -->
@@ -41,8 +42,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden absolute top-12 left-0 w-full bg-white p-2 md:p-4 shadow-lg md:hidden transition-all duration-300 ease-in-out transform -translate-y-full z-40">
-        <button id="close-btn" class="text-black text-xl absolute top-2 right-2 z-50">×</button>
+    <div id="mobile-menu" class="absolute top-12 left-0 w-full bg-white p-2 md:p-4 shadow-lg md:hidden transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none z-40">
+        <label for="menu-toggle" class="text-black text-xl absolute top-2 right-2 cursor-pointer z-50">×</label>
         <ul class="flex flex-col gap-2 font-racing text-sm">
             <li><a href="index.html" class="text-black hover:text-gray-500">Home</a></li>
             <li><a href="marketplace.html" class="text-black hover:text-gray-500">Marketplace</a></li>
@@ -59,41 +60,15 @@
         </ul>
     </div>
 
-    <!-- Script for Mobile Menu -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const closeBtn = document.getElementById("close-btn");
+    <style>
+        #menu-toggle:checked ~ #mobile-menu {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
 
-            if (!menuBtn || !mobileMenu || !closeBtn) {
-                console.error("One or more elements (menu-btn, mobile-menu, close-btn) not found");
-                return;
-            }
-
-            console.log("Menu script initialized");
-
-            // Handle click and touch events for menu button
-            menuBtn.addEventListener("click", toggleMenu);
-            menuBtn.addEventListener("touchstart", toggleMenu);
-
-            // Handle click and touch events for close button
-            closeBtn.addEventListener("click", closeMenu);
-            closeBtn.addEventListener("touchstart", closeMenu);
-
-            function toggleMenu(event) {
-                event.preventDefault();
-                console.log("Menu button clicked/touched");
-                mobileMenu.classList.toggle("hidden");
-                mobileMenu.classList.toggle("translate-y-0");
-            }
-
-            function closeMenu(event) {
-                event.preventDefault();
-                console.log("Close button clicked/touched");
-                mobileMenu.classList.add("hidden");
-                mobileMenu.classList.remove("translate-y-0");
-            }
-        });
-    </script>
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
 </header>
