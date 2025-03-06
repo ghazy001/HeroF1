@@ -47,7 +47,7 @@ module.exports = {
 };
 ```
 
-Ajoutez Tailwind dans `src/index.css` :
+Ajoutez Tailwind dans `src/input.css` :
 ```css
 @tailwind base;
 @tailwind components;
