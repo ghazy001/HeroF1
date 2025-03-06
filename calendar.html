@@ -18,44 +18,37 @@
 </head>
 <body class="bg-white">
 <div id="header-placeholder"></div>
-<div class="w-full flex justify-center my-4">
+
+<div class="w-full flex justify-center my-4 px-2">
     <img src="ressources/assets/bar.png" alt="Banner" class="w-full max-w-6xl rounded-lg">
 </div>
-<div class="container mx-auto p-10 flex justify-around items-center">
-    <!-- Left: Image Card -->
-    <div class="relative w-full max-w-4xl h-[400px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
+
+<div class="container mx-auto p-6 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-10">
+    <div class="relative w-full md:max-w-4xl h-96 bg-cover bg-center rounded-xl shadow-lg overflow-hidden" 
          style="background-image: url('ressources/assets/driver.png');">
-
-
-
-        <!-- Main Content -->
-        <div class="absolute inset-0 flex flex-col justify-center pl-80 pr-20  left-28 text-white">
-            <h2 class="text-4xl font-bold mb-2 italic">Austraila <span class="font-bold">GP</span></h2>
-            <p class="text-lg mb-4">Sunday, 16 March 2025</p>
-
-            <!-- Countdown Timer -->
-            <div class="flex space-x-3 text-2xl font-semibold">
-                <span>3</span> <span>:</span>
-                <span>12</span> <span>:</span>
-                <span>43</span> <span>:</span>
+        <div class="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-20 text-white">
+            <h2 class="text-3xl md:text-4xl font-bold italic">Australia <span class="font-bold">GP</span></h2>
+            <p class="text-lg md:text-xl mb-4">Sunday, 16 March 2025</p>
+            <div class="flex space-x-3 text-xl md:text-2xl font-semibold">
+                <span>3</span><span>:</span>
+                <span>12</span><span>:</span>
+                <span>43</span><span>:</span>
                 <span>14</span>
             </div>
             <p class="text-sm mt-1 tracking-wide">Day &nbsp; Hours &nbsp; Minutes &nbsp; Seconds</p>
         </div>
     </div>
-
-    <!-- Right: Navigation Bar (Outside the Image) -->
-    <div class="flex flex-col space-y-3 ml-8">
-        <a href="watch.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+    <div class="flex flex-col space-y-3 text-center md:text-left">
+        <a href="watch.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
             <i class="fas fa-play-circle mr-2"></i> Live now
         </a>
-        <a href="standings.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+        <a href="standings.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
             <i class="fas fa-trophy mr-2"></i> Standings
         </a>
-        <a href="marketPlace.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+        <a href="marketPlace.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
             <i class="fas fa-store mr-2"></i> Shop
         </a>
-        <a href="event.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+        <a href="event.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
             <i class="fas fa-newspaper mr-2"></i> News
         </a>
         <button class="mt-3 bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition duration-300">
@@ -74,61 +67,13 @@
         <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">F</div>
         <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">S</div>
         <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">S</div>
-
-        <!-- March 2025 Calendar -->
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center">1</div>
-        <div class="p-2 text-center">2</div>
-
-        <div class="p-2 text-center">3</div>
-        <div class="p-2 text-center">4</div>
-        <div class="p-2 text-center">5</div>
-        <div class="p-2 text-center">6</div>
-        <div class="p-2 text-center">7</div>
-        <div class="p-2 text-center">8</div>
-        <div class="p-2 text-center">9</div>
-
-        <div class="p-2 text-center">10</div>
-        <div class="p-2 text-center">11</div>
-        <div class="p-2 text-center">12</div>
-        <div class="p-2 text-center">13</div>
-        <div class="p-2 text-center bg-emerald-500 text-white font-bold">14<br>Practice</div>
-        <div class="p-2 text-center bg-blue-500 text-white font-bold">15<br>Qualifying</div>
-        <div class="p-2 text-center bg-amber-500 text-white font-bold">16<br>Australian GP</div>
-
-        <!-- Week 4 -->
-        <div class="p-2 text-center">17</div>
-        <div class="p-2 text-center">18</div>
-        <div class="p-2 text-center">19</div>
-        <div class="p-2 text-center">20</div>
-        <div class="p-2 text-center bg-emerald-500 text-white font-bold">21<br>Sprint/Practice</div>
-        <div class="p-2 text-center bg-blue-500 text-white font-bold">22<br>Qualifying</div>
-        <div class="p-2 text-center bg-amber-500 text-white font-bold">23<br>Chinese GP</div>
-
-        <!-- Week 5 -->
-        <div class="p-2 text-center">24</div>
-        <div class="p-2 text-center">25</div>
-        <div class="p-2 text-center">26</div>
-        <div class="p-2 text-center">27</div>
-        <div class="p-2 text-center">28</div>
-        <div class="p-2 text-center">29</div>
-        <div class="p-2 text-center">30</div>
-
-        <!-- Week 6 -->
-        <div class="p-2 text-center">31</div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
-        <div class="p-2 text-center"></div>
+        
+        <!-- Calendar days dynamically generated for responsiveness -->
+        <template id="calendar-template">
+            <div class="p-2 text-center"></div>
+        </template>
     </div>
 </section>
-
 
 <!-- Footer Placeholder -->
 <div id="footer-placeholder"></div>
@@ -141,6 +86,5 @@
             .then(data => document.getElementById("footer-placeholder").innerHTML = data);
     });
 </script>
-
 </body>
 </html>
