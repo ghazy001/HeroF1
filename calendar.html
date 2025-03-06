@@ -18,67 +18,77 @@
 </head>
 <body class="bg-white">
 <div id="header-placeholder"></div>
-
-<div class="w-full flex justify-center my-4 px-2">
+<div class="w-full flex justify-center my-4">
     <img src="ressources/assets/bar.png" alt="Banner" class="w-full max-w-6xl rounded-lg">
 </div>
-
-<div class="container mx-auto p-6 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-10">
-    <div class="relative w-full md:max-w-4xl h-96 bg-cover bg-center rounded-xl shadow-lg overflow-hidden" 
+<div class="container mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
+    <div class="relative w-full md:max-w-4xl h-[400px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
          style="background-image: url('ressources/assets/driver.png');">
-        <div class="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-20 text-white">
-            <h2 class="text-3xl md:text-4xl font-bold italic">Australia <span class="font-bold">GP</span></h2>
-            <p class="text-lg md:text-xl mb-4">Sunday, 16 March 2025</p>
-            <div class="flex space-x-3 text-xl md:text-2xl font-semibold">
-                <span>3</span><span>:</span>
-                <span>12</span><span>:</span>
-                <span>43</span><span>:</span>
+        <div class="absolute inset-0 flex flex-col justify-center text-white p-8 md:pl-80">
+            <h2 class="text-4xl font-bold mb-2 italic">Australie <span class="font-bold">GP</span></h2>
+            <p class="text-lg mb-4">Dimanche, 16 Mars 2025</p>
+            <div class="flex space-x-3 text-2xl font-semibold">
+                <span>3</span> <span>:</span>
+                <span>12</span> <span>:</span>
+                <span>43</span> <span>:</span>
                 <span>14</span>
             </div>
-            <p class="text-sm mt-1 tracking-wide">Day &nbsp; Hours &nbsp; Minutes &nbsp; Seconds</p>
+            <p class="text-sm mt-1 tracking-wide">Jours &nbsp; Heures &nbsp; Minutes &nbsp; Secondes</p>
         </div>
     </div>
-    <div class="flex flex-col space-y-3 text-center md:text-left">
-        <a href="watch.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
-            <i class="fas fa-play-circle mr-2"></i> Live now
+
+    <div class="flex flex-col space-y-3 mt-6 md:mt-0 md:ml-8">
+        <a href="watch.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+            <i class="fas fa-play-circle mr-2"></i> En direct
         </a>
-        <a href="standings.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
-            <i class="fas fa-trophy mr-2"></i> Standings
+        <a href="standings.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+            <i class="fas fa-trophy mr-2"></i> Classement
         </a>
-        <a href="marketPlace.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
-            <i class="fas fa-store mr-2"></i> Shop
+        <a href="marketPlace.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+            <i class="fas fa-store mr-2"></i> Boutique
         </a>
-        <a href="event.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center justify-center md:justify-start">
-            <i class="fas fa-newspaper mr-2"></i> News
+        <a href="event.html" class="text-gray-500 hover:text-gray-700 text-sm flex items-center">
+            <i class="fas fa-newspaper mr-2"></i> Actualités
         </a>
         <button class="mt-3 bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition duration-300">
-            Go Premium <i class="fas fa-arrow-right ml-1"></i>
+            Devenir Premium <i class="fas fa-arrow-right ml-1"></i>
         </button>
     </div>
 </div>
 
 <section class="w-full max-w-5xl mx-auto bg-white shadow-md rounded-lg p-4 mt-12">
-    <h2 class="text-2xl font-racing mb-4 text-left">MAR 2025</h2>
+    <h2 class="text-2xl font-racing mb-4 text-left">MARS 2025</h2>
     <div class="grid grid-cols-7 gap-1 p-4">
+        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">L</div>
         <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">M</div>
-        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">T</div>
-        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">W</div>
-        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">T</div>
-        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">F</div>
+        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">M</div>
+        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">J</div>
+        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">V</div>
         <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">S</div>
-        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">S</div>
-        
-        <!-- Calendar days dynamically generated for responsiveness -->
-        <template id="calendar-template">
-            <div class="p-2 text-center"></div>
-        </template>
+        <div class="p-2 text-center font-bold text-gray-600 bg-gray-200">D</div>
+
+        <div class="p-2 text-center"></div>
+        <div class="p-2 text-center"></div>
+        <div class="p-2 text-center"></div>
+        <div class="p-2 text-center"></div>
+        <div class="p-2 text-center"></div>
+        <div class="p-2 text-center">1</div>
+        <div class="p-2 text-center">2</div>
+
+        <div class="p-2 text-center">3</div>
+        <div class="p-2 text-center">4</div>
+        <div class="p-2 text-center">5</div>
+        <div class="p-2 text-center">6</div>
+        <div class="p-2 text-center">7</div>
+        <div class="p-2 text-center">8</div>
+        <div class="p-2 text-center">9</div>
+        <div class="p-2 text-center bg-emerald-500 text-white font-bold">14<br>Essais</div>
+        <div class="p-2 text-center bg-blue-500 text-white font-bold">15<br>Qualifications</div>
+        <div class="p-2 text-center bg-amber-500 text-white font-bold">16<br>Grand Prix</div>
     </div>
 </section>
 
-<!-- Footer Placeholder -->
 <div id="footer-placeholder"></div>
-
-<!-- Load Footer -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         fetch("footer.html")
