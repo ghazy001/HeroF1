@@ -2,19 +2,26 @@
     <!-- Top Bar (White) -->
     <div class="top-bar flex justify-between items-center bg-white p-4">
         <div class="left-section flex items-center gap-4">
-            <img src="ressources/assets/fia.png" alt="FIA Logo" class="h-10 ml-20">
+            <img src="ressources/assets/fia.png" alt="FIA Logo" class="h-10 ml-4 md:ml-20">
         </div>
-        <div class="right-section flex gap-4 mr-20">
-            <button class="signin-btn bg-black text-white px-4 py-2 font-racing rounded-full ">Sign In</button>
-            <button class="signup-btn bg-white text-primary font-racing border-2  border-primary px-4 py-2 rounded-full ">Sign Up</button>
+        <div class="right-section hidden md:flex gap-4 mr-4 md:mr-20">
+            <button class="signin-btn bg-black text-white px-4 py-2 font-racing rounded-full">Sign In</button>
+            <button class="signup-btn bg-white text-primary font-racing border-2 border-primary px-4 py-2 rounded-full">Sign Up</button>
         </div>
+
+        <!-- Menu Burger pour mobile -->
+        <button id="menu-btn" class="md:hidden text-black text-2xl">
+            <i class="fa fa-bars"></i>
+        </button>
     </div>
 
     <!-- Bottom Bar (Red) -->
-    <div class="bottom-bar bg-primary flex items-center justify-between p-4">
+    <div class="bottom-bar bg-primary flex items-center justify-between p-4 flex-wrap">
         <img src="ressources/assets/logo.png" alt="F1 Logo" class="h-10">
-        <nav class="main-nav">
-            <ul class="flex gap-8 font-racing">
+
+        <!-- Menu principal (caché sur mobile, visible sur desktop) -->
+        <nav class="main-nav hidden md:block">
+            <ul class="flex gap-4 md:gap-8 font-racing">
                 <li><a href="index.html" class="text-white">Home</a></li>
                 <li><a href="marketplace.html" class="text-white">Marketplace</a></li>
                 <li><a href="teams.html" class="text-white">Teams</a></li>
@@ -23,12 +30,38 @@
                 <li><a href="event.html" class="text-white">Events</a></li>
             </ul>
         </nav>
+
         <!-- Search Bar -->
-        <div class="search-container flex items-center bg-primary border-2 border-white font-racing rounded-full px-3 py-1">
+        <div class="search-container hidden md:flex items-center bg-primary border-2 border-white font-racing rounded-full px-3 py-1">
             <input type="text" placeholder="I am looking for..." class="bg-transparent text-white placeholder-white outline-none">
             <button type="submit" class="text-white">
                 <i class="fa fa-search"></i>
             </button>
         </div>
     </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden bg-white p-4 md:hidden">
+        <ul class="flex flex-col gap-4 font-racing">
+            <li><a href="index.html" class="text-black">Home</a></li>
+            <li><a href="marketplace.html" class="text-black">Marketplace</a></li>
+            <li><a href="teams.html" class="text-black">Teams</a></li>
+            <li><a href="Tickets.html" class="text-black">Tickets</a></li>
+            <li><a href="watch.html" class="text-black">Streaming</a></li>
+            <li><a href="event.html" class="text-black">Events</a></li>
+            <li class="mt-4">
+                <button class="signin-btn bg-black text-white px-4 py-2 font-racing rounded-full w-full">Sign In</button>
+            </li>
+            <li>
+                <button class="signup-btn bg-white text-primary font-racing border-2 border-primary px-4 py-2 rounded-full w-full">Sign Up</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Script pour le menu mobile -->
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
 </header>
